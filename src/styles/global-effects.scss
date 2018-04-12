@@ -1,0 +1,76 @@
+@import "global-variables";
+@import "local-variables";
+.f-animation{
+    animation: all 0.25s;
+}
+.m-animation{
+    animation: all 0.5s;
+}
+.s-animation{
+    animation: all 1s;
+}
+
+.hover-op-25:hover{
+    opacity: 0.25;
+}
+
+.hover-op-50:hover{
+    opacity: 0.5;
+}
+
+.hover-op-1:hover{
+    opacity: 1;
+}
+
+.background-blue-hover:hover{
+  background-color: $blue;
+}
+
+.background-orange-hover:hover{
+  background-color: $orange;
+}
+
+.background-white-hover:hover{
+  background-color: white;
+}
+
+.background-black-hover:hover{
+  background-color: black;
+}
+
+.scale-hover:hover{
+  -ms-transform: scale(1.5, 1.5); /* IE 9 */
+  -webkit-transform: scale(1.5, 1.5); /* Safari */
+  transform: scale(1.5, 1.5);
+}
+
+.cut-hover:hover{
+  background: white;
+
+  .cut-hover-link{
+    background: url($background);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+.cut-text{
+  background: url($background);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+.fade-in-effect{
+      -webkit-animation: fadein 2s ease-in-out; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s ease-in-out; /* Firefox < 16 */
+        -ms-animation: fadein 2s ease-in-out; /* Internet Explorer */
+         -o-animation: fadein 2s ease-in-out; /* Opera < 12.1 */
+            animation: fadein 2s ease-in-out;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+

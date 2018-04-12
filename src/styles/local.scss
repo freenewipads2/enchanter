@@ -1,0 +1,125 @@
+@import "local-variables";
+@import "global-variables";
+.wrapper{
+    position: absolute;
+    top:50px;
+    left:0%;
+    background: url($background);
+    background-size: cover;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    z-index: -2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.router{
+  z-index: 0;
+}
+
+body{
+  overflow: hidden;
+}
+
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.ql-toolbar{
+  background: rgba(255,255,255,0.8)!important;
+}
+.ql-snow{
+  border:0px!important;
+}
+.box .row.header {
+  flex: 0 1 50px;
+}
+
+.box .row.content {
+  flex: 1 1 auto;
+}
+
+.content{
+  padding-top: 50px;
+}
+
+.box .row.footer {
+  flex: 0 1 50px;
+  background: $learnify-blue;
+}
+.footer{
+  margin-top: 50px;
+}
+
+.image-box{
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-box-close{
+  top:0%;
+  right: 0%;
+}
+
+
+.input-field-clean{
+  background: rgba(255,255,255,0.5);
+  opacity: 1;
+  font-weight: 500;
+  color: black;
+}
+
+.blog-post{
+  line-height: 24px;
+}
+
+.input-field-clean:focus { /* WebKit, Blink, Edge */
+  outline: 0;
+}
+.input-field-clean::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgba(0,0,0,1);
+    opacity:  1;
+}
+.input-field-clean:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    rgba(0,0,0,1);
+   opacity:  1;
+}
+.input-field-clean::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    rgba(0,0,0,1);
+   opacity:  1;
+}
+.input-field-clean:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    rgba(0,0,0,1);
+   opacity:  1;
+}
+.input-field-clean::-ms-input-placeholder { /* Microsoft Edge */
+   color:    rgba(0,0,0,1);
+   opacity:  1;
+}
+
+.parent-comment{
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
+}
+
+.child-comment{
+  margin-left: 25%;
+}
+
+@media screen and (max-width: $break-point) {
+  .router{
+    z-index: -1;
+  }
+  .box{
+    z-index: -2;
+    position: absolute;
+  }
+  .wrapper{
+    z-index: 0;
+  }
+}
