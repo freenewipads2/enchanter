@@ -13,16 +13,9 @@ export class App {
 
 
   configureRouter(config, router) {
-    config.title = 'Beyond';
+    config.title = 'Your project name';
     config.map([
       {route: [''], name: 'home', moduleId: 'views/home', nav: true, title: 'Home'},
-      {
-        route: 'room/:code',
-        name: 'room',
-        moduleId: './views/room',
-        nav: false,
-        title: ""
-    },
     ]);
     this.router = router;
     //this.router.refreshNavigation()
